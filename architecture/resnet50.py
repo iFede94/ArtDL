@@ -1,6 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
-from net import resnet
+from architecture import resnet
 import torch
 
 class Net(nn.Module):
@@ -46,8 +46,29 @@ class Net(nn.Module):
     def trainable_parameters(self):
         return (list(self.backbone.parameters()), list(self.newly_added.parameters()))
 
-    def gap2d(x, keepdims=False):
-	    out = torch.mean(x.view(x.size(0), x.size(1), -1), -1)
-	    if keepdims:
-	        out = out.view(out.size(0), out.size(1), 1, 1)
-	    return out
+    def gap2d(self, x, keepdims=False):
+        out = torch.mean(x.view(x.size(0), x.size(1), -1), -1)
+        if keepdims:
+            out = out.view(out.size(0), out.size(1), 1, 1)
+        return out
+    
+
+class CAM(Net):
+
+    def __init__(self, num_classes):
+        super(CAM, self).__init__(num_classes)
+
+    def forward(self, x):
+
+        x = self.stage1(x)
+
+        x = self.stage2(x)
+
+        x = self.stage3(x)
+
+        x = self.stage4(x)
+
+        x = F.conv2d(x, self.classifier.weight)
+        x = F.relu(x)
+
+        return x
