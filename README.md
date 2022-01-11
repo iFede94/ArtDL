@@ -10,12 +10,14 @@ The data set can be found [here](https://drive.google.com/file/d/16FK1YnHPhGqCHf
 ## Citation
 If you find the data set useful, please consider citing our paper using the following BibTeX entry.
 ```
-@misc{milani2020data,
-title={A Data Set and a Convolutional Model for Iconography Classification in Paintings},
-author={Federico Milani and Piero Fraternali},
-eprint={2010.11697},
-archivePrefix={arXiv},
-primaryClass={cs.CV},
-year={2020}
+@article{milani2021dataset,
+  title={A Dataset and a Convolutional Model for Iconography Classification in Paintings},
+  author={Milani, Federico and Fraternali, Piero},
+  journal={Journal on Computing and Cultural Heritage (JOCCH)},
+  volume={14},
+  number={4},
+  pages={1--18},
+  year={2021},
+  publisher={ACM New York, NY, USA}
 }
 ```
