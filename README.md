@@ -1,5 +1,5 @@
 # ArtDL
-A Data Set and a Convolutional Model for Iconography Classification in Paintings. Federico Milani and Piero Fraternali [[Paper]](https://arxiv.org/abs/2010.11697)
+A Data Set and a Convolutional Model for Iconography Classification in Paintings. Federico Milani and Piero Fraternali [[Paper]](https://dl.acm.org/doi/10.1145/3458885)
 
 This repository includes the ResNet50 architecture and a pretrained model on the ArtDL data set. You will also find the classes on which the model has been trained and the train, val and test sets.
 
