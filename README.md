@@ -5,7 +5,7 @@ This repository includes the ResNet50 architecture and a pretrained model on the
 
 The official website of ArtDL is [artdl.org](http://www.artdl.org).
 
-The data set can be found [here](https://drive.google.com/file/d/16FK1YnHPhGqCHf_EpovzcH0v90yXcCer/view).
+The data set can be found [here](https://zenodo.org/record/6473001).
 
 ## Citation
 If you find the data set useful, please consider citing our paper using the following BibTeX entry.
